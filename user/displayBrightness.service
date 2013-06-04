@@ -1,0 +1,9 @@
+[Unit]
+Description=Sets the default display brightness
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xbacklight -set 80
+
+[Install]
+WantedBy=default.target

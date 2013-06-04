@@ -1,0 +1,11 @@
+[Unit]
+Description=minidlna server
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/minidlnad -f /home/%u/.config/minidlna/minidlna.conf -P /home/%u/.config/minidlna/minidlna.pid
+PIDFile=/home/%u/.config/minidlna/minidlna.pid
+
+[Install]
+WantedBy=default.target
