@@ -2,7 +2,7 @@
 Description = Unclutter
 
 [Service]
-ExecStart = /usr/bin/unclutter -idle 1 -root
+ExecStart = /usr/bin/unclutter -idle 3 -root
 
 [Install]
 WantedBy = default.target
