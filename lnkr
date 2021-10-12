@@ -2,6 +2,9 @@
 
 install() {
   link "$REPOSITORY_ROOT" ~/.config/systemd
+  for file in system/*; do
+    sudo link "$REPOSITORY_ROOT/$file" "/etc/systemd/system/$(basename $file)"
+  done
 }
 
 source <(curl -Lfs https://git.io/lnkr)
